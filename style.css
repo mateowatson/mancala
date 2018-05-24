@@ -1,0 +1,207 @@
+body {
+	color: var(--gray-dark);
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.game99__game-title {
+	font-family: 'Faster One', sans-serif;
+}
+
+.game99__btn_primary {
+	background-color: var(--orange);
+	color: #fff;
+}
+
+.mancala {
+	--man-brown: #6b4412;
+	--man-darkbrown: #4c3211;
+	--man-green: #656b12;
+	--man-dark-green: #51560b;
+	--man-yellow: #ead12e;
+
+	--man-sand: #e2dea1;
+	--man-sand-dark: #3a3929;
+
+	background-color: var(--man-sand);
+}
+
+.mancala__heading1, .mancala__winner-heading, .mancala__instructions h2 {
+	font-family: 'Macondo Swash Caps';
+	color: var(--man-sand-dark);
+}
+
+.mancala__heading1 {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	font-size: 50px;
+	text-align: center;
+}
+
+.mancala__winner-heading {
+	color: #fff;
+	text-align: center;
+}
+
+.mancala__winner-notification {
+	position: relative;
+	padding-top: 100px;
+	margin-top: 50px;
+	padding-bottom: 50px;
+	height: auto;
+	width: 100%;
+	background-color: var(--man-green);
+}
+
+.mancala__winner-options {
+	position: relative;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.mancala__btn {
+	display: block;
+	position: relative;
+	width: 100%;
+	color: var(--man-sand-dark);
+}
+
+.mancala__btn_primary {
+	margin: 50px 0 25px 0;
+	background-color: var(--man-sand);
+}
+
+.mancala__holes-wrapper, .mancala__turn {
+	margin: 0 auto;
+	width: 800px;
+}
+
+.mancala__holes-wrapper {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.mancala__turn {
+	font-size: 1.5em;
+	color: var(--man-sand-dark);
+}
+
+.mancala__holes {
+	/*display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;*/
+	position: relative;
+	display: block;
+	margin-left: 100px;
+	width: 600px;
+	height: 200px;
+}
+
+.mancala__hole {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	width: 100px;
+	height: 100px;
+	background-color: var(--man-brown);
+}
+
+.mancala__hole:nth-child(8),
+.mancala__hole:nth-child(9),
+.mancala__hole:nth-child(10),
+.mancala__hole:nth-child(11),
+.mancala__hole:nth-child(12),
+.mancala__hole:nth-child(13) {
+	float: left;
+}
+
+.mancala__hole_store {
+	position: absolute;
+	top: 0;
+	left: -100px;
+	background-color: var(--man-green);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+}
+
+.mancala__hole_store:nth-child(14) {
+	left: 600px;
+}
+
+.mancala__stones {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 65px;
+	height: 80px;
+	border-radius: 25%;
+	background-color: var(--man-darkbrown);
+
+	z-index: 99999;
+
+	cursor: pointer;
+}
+
+.mancala__stones-count {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 16px;
+	color: #000;
+	opacity: .6;
+}
+
+.mancala__hole_store .mancala__stones-count {
+	color: #fff;
+}
+
+.mancala__hole_store .mancala__stones {
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+}
+
+.mancala__stone {
+	display: block;
+	top: 5px;
+	left: 5px;
+	width: 5px;
+	height: 15px;
+	margin-right: 2px;
+	border-radius: 100%;
+	background-color: var(--man-yellow);
+	transform: rotate(20deg);
+}
+
+.mancala__stone:nth-child(odd) {
+	transform: rotate(15deg);
+}
+
+.mancala__stone:nth-child(4n + 1) {
+	transform: rotate(-10deg);
+}
+
+.mancala__instructions {
+	padding: 50px 24px;
+	max-width: 690px;
+	margin: 0 auto;
+	color: var(--man-sand-dark);
+}
+
+.mancala__grass-canvas {
+	position: absolute;
+	top: -5px;
+	left: -3px;
+	z-index: 9999;
+}
+
+.mancala__grass-canvas_14 {
+	left: auto;
+	right: -3px;
+}
